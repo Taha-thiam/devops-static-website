@@ -12,6 +12,7 @@ jobs:
     steps:
       - name: Checkout du code
         uses: actions/checkout@v3
+        
 
       - name: Connexion à Docker Hub
         uses: docker/login-action@v3
