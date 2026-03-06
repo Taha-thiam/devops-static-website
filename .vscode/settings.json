@@ -1,3 +1,20 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "DockerRun.DisableDockerrc": true,
+    "DockerRun.Containers": [
+        "8c602010f05d",
+        "f8c2559a60f5",
+        "3feaef2616ff",
+        "3f75acdd0894",
+        "8c37514567fe",
+        "86d12f3ffb2e",
+        "4cea01080d5a",
+        "3bf161a6b97e",
+        "955fa0cccea7",
+        "9ba5ccbbcb4d",
+        "8649e97b1412",
+        "604ff1e1c39d",
+        "2c07998e1592",
+        "f341022a51c6"
+    ]
 }
