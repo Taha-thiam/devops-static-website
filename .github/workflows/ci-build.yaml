@@ -23,6 +23,8 @@ jobs:
       - name: Build de l'image Docker
         run: docker build -t tthiam/devops-static-website:v1 .
 
+
+        # hhzh
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@0.20.0
         with:
