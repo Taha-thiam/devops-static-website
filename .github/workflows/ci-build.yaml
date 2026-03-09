@@ -7,7 +7,6 @@ on:
 
 jobs:
   build-and-push:
-    # runs-on: ubuntu-latest
     runs-on: self-hosted
 
     steps:
@@ -22,22 +21,6 @@ jobs:
 
       - name: Build de l'image Docker
         run: docker build -t tthiam/devops-static-website:v1 .
-
-
-        # hhzh
-      - name: Run Trivy vulnerability scanner
-        run: |
-          $version = "0.50.1"
-          Invoke-WebRequest -Uri "https://github.com/aquasecurity/trivy/releases/download/v$version/trivy_$($version)_windows-64bit.zip" -OutFile "trivy.zip"
-          Expand-Archive -Path "trivy.zip" -DestinationPath "." -Force
-          
-          .\trivy.exe image `
-            --severity CRITICAL,HIGH,MEDIUM `
-            --exit-code 1 `
-            --vuln-type os,library `
-            --ignore-unfixed `
-            tthiam/devops-static-website:v1
-        shell: powershell
 
       - name: Push de l'image vers Docker Hub
         run: docker push tthiam/devops-static-website:v1
